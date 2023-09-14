@@ -28,3 +28,22 @@ const myFun = function () {
      console.log('hello world');
      
 }
+
+
+// stack(primitive) , heap(non-primitive)
+let myname = "Durgesh"
+let anotherName = myname
+anotherName = "Nikhil"
+
+console.log(myname);
+console.log(anotherName);
+
+let userOne ={
+     email:"user@gmail.com",
+     upi:"user@api"
+}
+
+let userTwo = userOne;
+userTwo.email = "hitesh@gmail.com"
+console.log(userOne.email);
+console.log(userOne.email);
