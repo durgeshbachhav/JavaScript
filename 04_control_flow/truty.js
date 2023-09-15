@@ -30,3 +30,23 @@ if(Object.keys(myObj).length === 0 ){
 // true
 // false == ''
 // true
+
+
+// nullish coalescing operator(??): null operator
+
+let val1;
+val1= 5 ?? 56;
+val1 = null ?? 20;
+
+val1 = undefined ?? 23;
+
+val1 = null ?? 10 ?? 20
+console.log(val1);
+
+
+// null colesing and ternary operator are different
+
+// condition> true: false
+
+const iceTeaPrice = 100
+iceTeaPrice <=20 ?console.log('high'):console.log("low");;
