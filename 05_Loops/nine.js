@@ -39,4 +39,4 @@ const shoppingCart =[
 
  const total = shoppingCart.reduce((acc, item)=> acc + item.price ,0)
 // item denote karta hai shoppingcart ke har ek object ko
-console.log(total);
+console.log(total); 
