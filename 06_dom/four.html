@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(LangName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${LangName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("java");
+    addLanguage("typeScipt");
+    addLanguage("cpp");
+
+    //     this is optimize way because we dont need to traverse whole tree
+    function addOptimiseLanguage(LangName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(LangName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptimiseLanguage("golang");
+
+    //     edit
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = 'mojo'
+
+    const newLi = document.createElement("li");
+    newLi.textContent = "mojo";
+    secondLang.replaceWith(newLi);
+    console.log(newLi);
+
+    //     second edit
+    const firstLang = document.querySelector("li:nth-child(1)");
+    firstLang.outerHTML = "<li>typeScript</li>";
+
+    //remove
+    const lastLanguage = document.querySelector('li:last-child')
+       lastLanguage.remove() 
+  </script>
+</html>
