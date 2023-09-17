@@ -1,43 +1,39 @@
-// declare = literal and constuctor
-// concept singleton 
-// literal se singleton nhi banta constructor se banta hai
+// Concept of Singleton:
+// Objects created using literals are not singletons, but objects created using constructors can be singletons.
 
-// Object.create
+// Creating a symbol
+const mySym = Symbol("key1");
 
-// object literals
+// Object Literal:
+const user = {
+    name: "durgesh",
+    "full name": "durgesh bachhav", // Using square notation for property with spaces
+    [mySym]: "mykey1", // This will not work as a property key
+    age: 22,
+    location: "nashik",
+    email: "durgesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ['monday', 'wednesday']
+};
 
-const mySym = Symbol("key1")
+// Accessing object properties:
+// console.log(user.email); // Not the best practice for accessing properties
+// console.log(user["full name"]); // Using square brackets for accessing a property with spaces
+// console.log(user[mySym]); // Accessing a property with a symbol as the key
 
+// Modifying object properties:
+user.email = 'nikhil@gmail.com'; // Changing the email property
 
-const user ={
-     name:"durgesh",
-     "full name":"durgesh bachhav", //we cant access this using . that why we use ["full name"] square notation
-     [mySym]:"mykey1", //this will not work
-     age:22,
-     location:"nashik",
-     email:"durgesh@google.com",
-     isLoggedIn:false,
-     lastLoginDays:['monday','wednusday']
+// Freezing an object to prevent property changes:
+// Object.freeze(user);
 
-}
+// Attempting to change a frozen object's property (commented out since Object.freeze is used):
+// user.email = 'nikhil@chatgpt.com';
 
-// console.log(user.email); // this is not good way for good developing
-// console.log(user["full name"]);
-// console.log(user[mySym]); //symbol
+// Functions can also be added to objects as properties:
+user.greeting = function () {
+    console.log(`Hello ${this.name}`);
+};
 
-
-user.email = 'nikhil@gmail.com'
-// if you want to not change any object value then freez object
-
-// Object.freeze(user)
-
-user.email = 'nikhil@chatgpt.com'
-// console.log(user);
-
-// function
-
-user.greeting = function(){
-     console.log(`hello ${this.name}`);
-}
-
-console.log(user.greeting());
+// Calling the greeting function from the object:
+console.log(user.greeting()); // Prints: "Hello durgesh"
