@@ -1,49 +1,51 @@
-// primitives
+// Primitive data types (7 types): String, Number, Boolean, Undefined, Null, Symbol, BigInt
 
-// 7 types: String, Number, Boolean, Undefined, Null , Symbol, BigInt
+// Examples of primitive data types:
+const score = 100; // Number
+const scoreValue = 100.3; // Number
 
-const score = 100;
-const scoreValue = 100.3
+const isLoggedIn = true; // Boolean
+const outsideTemp = null; // Null
+let userEmail; // Undefined
 
-const isLoggedIn = true;
-const outsidetemp = null
-let userEmail 
-// how to use symbol
-const id =Symbol('123')
-const anotherId = Symbol('123')
-// console.log(id == anotherId);
+// How to use Symbol: Creating unique symbols
+const id = Symbol('123');
+const anotherId = Symbol('123');
+// Symbols are always unique, so id and anotherId are not equal.
+// console.log(id == anotherId); // false
 
+// Reference data types: Array, Objects, Functions
 
+// Examples of reference data types:
+const heroes = ['spiderman', 'ironman', 'batman', 'captain america']; // Array
 
-// reference datatypes
-// Array, objects, Functions
-const heros = ['spiderman', 'ironman','batman','captain america'];
-
-const myObj={
-     username:"durgesh",
-     age:22,
-}
+const myObj = {
+    username: "durgesh",
+    age: 22,
+}; // Object
 
 const myFun = function () {
-     console.log('hello world');
-     
-}
+    console.log('hello world');
+}; // Function
 
+// Stack vs. Heap (Primitive vs. Non-primitive):
+let myName = "Durgesh";
+let anotherName = myName;
+anotherName = "Nikhil";
 
-// stack(primitive) , heap(non-primitive)
-let myname = "Durgesh"
-let anotherName = myname
-anotherName = "Nikhil"
+// 'myName' and 'anotherName' are separate copies of the primitive string.
+// Changing one doesn't affect the other.
+console.log(myName); // "Durgesh"
+console.log(anotherName); // "Nikhil"
 
-console.log(myname);
-console.log(anotherName);
-
-let userOne ={
-     email:"user@gmail.com",
-     upi:"user@api"
-}
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@api"
+};
 
 let userTwo = userOne;
-userTwo.email = "hitesh@gmail.com"
-console.log(userOne.email);
-console.log(userOne.email);
+userTwo.email = "hitesh@gmail.com";
+
+// Both 'userOne' and 'userTwo' reference the same object, so changing one also changes the other.
+console.log(userOne.email); // "hitesh@gmail.com"
+console.log(userTwo.email); // "hitesh@gmail.com"

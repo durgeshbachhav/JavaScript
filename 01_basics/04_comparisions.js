@@ -1,35 +1,29 @@
-// console.log(2 > 1);
-// console.log(2 >= 1);
-// console.log(2 < 1);
-// console.log(2 <= 1);
-// console.log(2 == 1);
-// console.log(2 != 1);
+// Comparing numbers using comparison operators:
+// console.log(2 > 1); // true
+// console.log(2 >= 1); // true
+// console.log(2 < 1); // false
+// console.log(2 <= 1); // false
+// console.log(2 == 1); // false
+// console.log(2 != 1); // true
 
-// console.log("2" > 1);
-// console.log("02" > 1);
+// Comparing a string to a number:
+// console.log("2" > 1); // true
+// console.log("02" > 1); // true (string "02" is converted to a number)
 
+// Comparing null and 0:
 // console.log(null > 0); // false
 // console.log(null == 0); // false
-// console.log(null >= 0); // true reason is below
+// console.log(null >= 0); // true
+// Explanation: JavaScript uses type coercion to convert null to a number, making the last comparison true (0 >= 0).
 
-/*
-JavaScript mein, jab aap >= operator ka use karte hain values ko compare karne ke liye jo alag-alag types ke hote hain, jaise null (jo ki object type ka hota hai) aur 0 (jo ki number type ka hota hai), toh JavaScript type coercion ka use karta hai taki comparison meaningful ho sake. Type coercion ek process hai jisme ek ya dono operands ko common data type mein convert kiya jata hai comparison karne se pehle.
+// Comparing undefined to 0:
+// console.log(undefined == 0); // false
+// console.log(undefined > 0); // false
+// console.log(undefined < 0); // false
+// All comparisons with undefined result in false because undefined doesn't have a meaningful numeric representation.
 
-Is case mein, null ko number type mein coerce (convert) kiya jata hai aur isse expression effectively 0 >= 0 ho jata hai, jo true hota hai kyunki 0 0 ke barabar hota hai.
-*/
-
-
-// console.log(undefined == 0);
-// console.log(undefined > 0);
-// console.log(undefined < 0);
-
-// all are false because it is undefined
-
+// Comparing a string and a number:
 console.log("2" == 2); // true
 console.log("2" === 2); // false
-
-/* reason: 
-The first comparison (`"2" == 2`) returns `true` because JavaScript performs type coercion, converting the string `"2"` to a number before comparison.
-
-The second comparison (`"2" === 2`) returns `false` because it uses strict equality (`===`), which checks both the value and the data type, and the data types of `"2"` (string) and `2` (number) are not the same.
-*/
+// Explanation: The first comparison ("2" == 2) uses type coercion and converts the string to a number before comparison, resulting in true.
+// The second comparison ("2" === 2) uses strict equality (===) and checks both value and data type, so it's false because the data types are different.
