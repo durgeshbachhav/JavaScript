@@ -1,3 +1,6 @@
+// NOTE : - DO THIS PROJECT AFTER LEARNIG EVENT
+
+
 // valid hexadecimal color codes is from #000000 (black) to #FFFFFF (white). 
 
 // Function to generate a random hexadecimal color code

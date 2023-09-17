@@ -1,3 +1,5 @@
+
+
 // Generate a random number between 1 and 100 (inclusive) and store it in 'randomNumber'
 let randomNumber = parseInt(Math.random() * 100 + 1);
 

@@ -1,3 +1,8 @@
+// NOTE : - DO THIS PROJECT AFTER LEARNIG EVENT
+
+
+
+
 // Select the HTML element with id "insert"
 const insert = document.querySelector('#insert');
 
