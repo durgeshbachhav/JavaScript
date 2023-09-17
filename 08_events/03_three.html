@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1>game start</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+     // setInterval(()=>{
+     //      console.log('hello', Date.now());
+     // },1000)
+
+     const sayHello = (str)=>{
+          console.log(str,Date.now());
+     }
+      
+     let intervalId ;
+     const start = document.querySelector('#start')
+     const stop = document.querySelector('#stop')
+     start.addEventListener('click',()=>{
+          intervalId = setInterval(()=>{
+               sayHello('durgesh')
+          },1000)
+     })
+     stop.addEventListener('click',()=>{
+          clearInterval(intervalId)
+     })
+
+  </script>
+</html>

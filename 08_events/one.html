@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h1>amazing images</h1>
+    <ul id="images">
+      <li>
+        <img
+          width="200px"
+          id="photoshop"
+          src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="photoshop"
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="japan"
+          src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="river"
+          src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="owl"
+          src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""
+          
+        />
+      </li>
+      <li>
+        <img
+          width="200px"
+          id="prayer"
+          src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""
+        />
+      </li>
+      <li>
+        <a style="color: aliceblue" href="https://google.com" id="google"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+     //   document.getElementById('owl').onclick =function(){
+     //        alert('owl clicked')
+     //   }
+     // use event listerner because it provide functionlity like propogation 
+     // means features kam deta hai
+     document.getElementById('owl').addEventListener('click',(e)=>{
+          // alert('hi i am owl');
+          // console.log(e.target);
+     },true)
+     // default false hoti hai likne ki jarurat nhi hoti
+     // type , timestamp , defaultprevented, 
+     // target , toElement , srcElement, currentTarget, 
+     // clientx , clientY, screenx , screenY
+     // altkey, ctrlkey , shift , keycode
+
+     // document.getElementById('images').addEventListener('click',(e)=>{
+     //      console.log('clicked inside the ul');
+     // },false)//true
+     // document.getElementById('owl').addEventListener('click',(e)=>{
+     //      console.log('owl clicked');
+     //      e.stopPropagation();
+     // },false)//true
+// use event listerner because it provide functionlity like propogation  use for bubbling  use false for owl then images ? true for images then owl
+
+// event default
+// document.getElementById('google').addEventListener('click',(e)=>{
+//      e.preventDefault();
+//      e.stopPropagation();
+//      console.log('google clicked!');
+// },false)
+
+
+document.querySelector('#images').addEventListener('click',(e)=>{
+// console.log(e.target.parentNode);
+console.log(e.target.tagName);
+if(e.target.tagName === 'IMG'){
+     console.log(e.target.id);
+}
+let removeIt = e.target.parentNode
+// removeIt.remove();
+removeIt.parentNode.removeChild(removeIt);
+})
+  </script>
+</html>

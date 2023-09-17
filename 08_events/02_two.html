@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1>durgesh Bachhav</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // yeh hume browser ke through milte hai not a core js
+    // callback function na likeke alag likh sakte hai aur reference pass kar sakte hai
+    // setTimeout(() => {
+    //   console.log("durgesh");
+    // }, 2000);
+    const sayDurgesh = function () {
+      console.log("durgesh");
+    };
+    // pass refrence
+    // setTimeout(sayDurgesh, 2000);
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "best js series";
+    };
+    const changeme = setTimeout(changeText, 2000);
+
+    // clear timeout
+    // it want reference of function which i want to cleartimeout
+    // clearTimeout(changeme)
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeme);
+      console.log("STOP");
+    });
+  </script>
+</html>
