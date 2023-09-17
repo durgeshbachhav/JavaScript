@@ -1,56 +1,44 @@
+// Creating an object 'user'
 const user = {
      username: 'durgesh',
      price: 999,
-     //current scope ya context ka ke value ko access karne ke liye hum this keyword use karte hai
+     // 'welcomeMessage' is a method that can access properties of 'user' using 'this'
      welcomeMessage: function () {
           console.log(`Welcome to our website ${this.username}`);
           console.log(this);
      }
 }
 
-// user.welcomeMessage()
+// Calling the 'welcomeMessage' method
+// user.welcomeMessage();
+
+// Modifying the 'username' property of 'user'
 // user.username = 'sam';
-// user.welcomeMessage()
 
-// console.log(this);
-// function chai(){
-//      let username = 'durgesh'
-//      console.log(this.username);
+// Calling 'welcomeMessage' again to see the updated 'username'
+// user.welcomeMessage();
+
+// 'this' outside an object does not refer to the object itself; it depends on the context
+// console.log(this); // Refers to the global context
+
+// Arrow function example
+// const addTwo = (num1, num2) => num1 + num2;
+
+// Arrow function with curly braces and 'return'
+// const addTwo = (num1, num2) => {
+//      return num1 + num2;
 // }
 
-// chai()
+// Arrow function returning an object (requires parentheses around the object)
+const addTwo = (num1, num2) => ({ username: "durgesh" });
 
-// const chai =function(){
-// let username = "durgesh"
-// console.log(this.username);
-// }
+// Calling the 'addTwo' function
+console.log(addTwo(2, 3)); // Outputs: { username: 'durgesh' }
 
-// chai();
-const chai = () => {
-     let username = "durgesh"
-     console.log(this);
-}
+// Array and arrow function example
+const MyArr = [2, 4, 5, 8, 6];
 
-// chai();
+// Using the 'forEach' method with an arrow function
+// MyArr.forEach(() => { /* function logic */ });
 
-// const addTwo = (num1,num2)=>{
-//      return num1+num2;
-// }
-
-// console.log(addTwo(3,4));
-
-// what is emplicit fuction look below
-// const addTwo = (num1, num2) => num1 + num2
-
-// when curly braces are use we need to write return and if parenthesis use no need to write return
-
-// const addTwo = (num1, num2) => (num1 + num2)
-const addTwo = (num1, num2) => ({username:"durgesh"}) 
-// jab bhi hum arrow function use karte hai tab object ko hume curly braces mein define karna hota hai
-console.log(addTwo(2,3));
-
-
-const MyArr = [2,4,5,8,6]
-// hum aise likte hai
-// MyArr.forEach(function(){})
-// MyArr.forEach(()=>{})
+// Arrow functions are commonly used for concise function expressions and can be useful when working with arrays and higher-order functions.

@@ -1,22 +1,18 @@
-// immediately involked function expressions (IIFE)
-
-
-// named IIFE
-(function chai(){
-     console.log(`db connected`);
+// Named IIFE (Immediately Invoked Function Expression)
+(function chai() {
+     console.log(`DB connected`);
 })();
-// semicolon is required for this case otherwise it will get error and not run 2nd function
+// Semicolon is required before the IIFE to prevent potential syntax errors
 
-// unnamed IIFE
-(()=>{
-     console.log(`db connected two`);
+// Unnamed IIFE using an arrow function
+(() => {
+     console.log(`DB connected two`);
 })();
-// IIFE  => jo function immediately execute ho jaye or global scope ke pollution se problem hoti hai kahi baar tho global scope ke pollution ke declaration ko hatane ke liye IIFE  ka use kiya
 
-
-((dbname)=>{
-     console.log(`db connected to ${dbname}`);
+// IIFE with parameters
+((dbname) => {
+     console.log(`DB connected to ${dbname}`);
 })('server');
+// Semicolon is used before the IIFE to avoid any issues with previous code
 
-// use semicolon ; for IIFE function
-
+// IIFE (Immediately Invoked Function Expressions) are often used to encapsulate code and avoid polluting the global scope. They can also take parameters and are executed immediately upon definition.

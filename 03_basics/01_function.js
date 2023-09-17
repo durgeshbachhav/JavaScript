@@ -1,5 +1,4 @@
-
-
+// Function Declaration: sayMyName
 function sayMyName() {
      console.log("H");
      console.log("i");
@@ -8,71 +7,65 @@ function sayMyName() {
      console.log("i");
 }
 
-// sayMyName()
-//fuction ki defination ke  parameter hote hai
-// function addTwoNumbers(n1,n2){
-//      console.log(n1 + n2);
-// }
+// Calling the sayMyName function
+// sayMyName();
 
-
+// Function Declaration: addTwoNumbers
 function addTwoNumbers(n1, n2) {
-     // let result = n1 + n2;
-     // return result
-
+     // Calculate the sum of n1 and n2
      return n1 + n2;
 }
 
-//function ke ander arguments pass karte hai
-// addTwoNumbers(3 , 8)
+// Calling the addTwoNumbers function and storing the result
 const result = addTwoNumbers(3, 8);
 // console.log(result);
 
+// Function with a default parameter
 function loginUserMessage(username = "sam") {
      if (!username) {
-          console.log("please enter a username");
-          return
+          console.log("Please enter a username");
+          return;
      }
-     return `${username} just logged in`
+     return `${username} just logged in`;
 }
 
+// Logging messages with different username inputs
 // console.log(loginUserMessage("durgesh"));
 // console.log(loginUserMessage(""));
 // console.log(loginUserMessage("durgesh"));
 
-//
-// ... is called rest operator as well as spred operator depend on condition
-// function calculateCartPrice(...num1){
-//      return num1
-     
-// }
-function calculateCartPrice(val1,val2,...num1){
-     return num1
-     
+// Function with the rest operator (collects remaining arguments into an array)
+function calculateCartPrice(val1, val2, ...num1) {
+     return num1;
 }
-// console.log(calculateCartPrice(200,400,500,2000));
 
+// Example of using the calculateCartPrice function
+// console.log(calculateCartPrice(200, 400, 500, 2000));
+
+// Object and function handling
 const user = {
-     username:"durgesh",
-     prices:"199"
+     username: "durgesh",
+     price: "199"
 }
 
-function handleObjcet(anyobject){
-     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
-
+function handleObject(anyObject) {
+     console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
-
-// handleObjcet(user);
-handleObjcet({
-     username:"sam",
-     price:144 
-
+// Calling the handleObject function with an object as an argument
+// handleObject(user);
+handleObject({
+     username: "sam",
+     price: 144
 })
 
-const mynewArray=[200,300,400,500,600]
+// Function to return the second value from an array
+const myNewArray = [200, 300, 400, 500, 600];
 
-function returnSecondValue(getarray){
-     return getarray[1];
+function returnSecondValue(getArray) {
+     return getArray[1];
 }
-// console.log(returnSecondValue(mynewArray));
-console.log(returnSecondValue([200,600,500]));
+
+// Example of using the returnSecondValue function
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 600, 500])); // Outputs: 600
