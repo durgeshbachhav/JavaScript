@@ -1,32 +1,30 @@
-// while and do-while loop
+// Using a while loop
+let i = 0; // Declare and initialize 'i'
 
+// Loop continues as long as 'i' is less than or equal to 10
+while (i <= 10) {
+     console.log(`Value of index is ${i}`);
+     i += 2; // Increment 'i' by 2 in each iteration
+}
 
-// same as if statement
-// declare
-// let i=0;
-// // condition
-// while (i<=10) {
-//      console.log(`value of index is ${i}`);
-//      // updation
-//      i+=2;
-     
-// }
+// Using a while loop to iterate through an array
+const MyArray = ['flash', 'ironman', 'spiderman'];
+let arr = 0; // Declare and initialize 'arr'
 
-// let MyArray = [ 'flash','ironman','sprderman']
+// Loop continues as long as 'arr' is less than the length of 'MyArray'
+while (arr < MyArray.length) {
+     console.log(`Value is ${MyArray[arr]}`);
+     arr++; // Increment 'arr' to move to the next element
+}
 
-// let arr = 0;
-// while (arr < MyArray.length) {
-//      console.log(`value is ${MyArray[arr]}`);
-//      arr++;
-// }
+// Using a do-while loop
+let score = 11; // Declare and initialize 'score'
 
-//do-while loop
-
-// let score = 11;
-// do {
-//      console.log(`score is ${score}`);
-//      score++;
-// } while (score<=10);
+// The code block inside the loop will execute at least once
+do {
+     console.log(`Score is ${score}`);
+     score++; // Increment 'score'
+} while (score <= 10); // Loop continues as long as 'score' is less than or equal to 10
 
 // it is udhari system pehle karid lo baad mein paise do
 

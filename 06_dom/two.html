@@ -3,35 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dom</title>
+    <title>DOM</title>
   </head>
   <body style="background-color: #212121; color: #fff;">
     <div class="parent">
-     <!--  this is comment  -->
-      <div class="day">monday</div>
-      <div class="day">tuesday</div>
-      <div class="day">wednesday</div>
-      <div class="day">thusday</div>
+      <!-- This is a comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
     </div>
   </body>
   <script>
-     const parent = document.querySelector('.parent')
-     // console.log(parent);
-     // console.log(parent.children);
-     // console.log(parent.children[0].innerHTML);
+    // Select the parent element with the class "parent"
+    const parent = document.querySelector('.parent');
 
-     // for (let i = 0; i < parent.children.length; i++) {
-     //      console.log(parent.children[i].innerHTML);
-          
-     // }
-     parent.children[0].style.color = 'red'
-     // console.log(parent.firstElementChild);
-     // console.log(parent.lastElementChild);
-     const day1 = document.querySelector('.day')
-     // console.log(day1.parentElement);
-     // console.log(day1.nextElementSibling);
+    // Log the parent element and its children to the console
+    // console.log(parent);
+    // console.log(parent.children);
 
-     console.log("nodes", parent.childNodes);
+    // Access and log the innerHTML of the first child element
+    // console.log(parent.children[0].innerHTML);
 
+    // Change the text color of the first child element to red
+    parent.children[0].style.color = 'red';
+
+    // Access and log the first and last child elements
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // Select the first element with the class "day"
+    const day1 = document.querySelector('.day');
+
+    // Log the parent element of day1 and its next sibling
+    // console.log(day1.parentElement);
+    // console.log(day1.nextElementSibling);
+
+    // Log all child nodes of the parent element (including text nodes)
+    console.log("nodes", parent.childNodes);
   </script>
 </html>

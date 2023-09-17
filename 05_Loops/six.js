@@ -1,25 +1,23 @@
+
 const coding = ['js', 'py', 'cpp', 'java', 'c', 'rb']
 
-
-// foreach loop never return value
+// The forEach loop never returns a value
 const values = coding.forEach((item) => {
      // console.log(item);
      return item;
 })
 
-// console.log(values);//undefined
+// console.log(values); // undefined
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// filter method can return values jo ki foreach nhi karta
-// const newNums = myNums.filter((num) => num > 4)
-// implicit type return required below expample
-// const newNums = myNums.filter((num) => { return num > 4})
+// The filter method can return values that meet a condition
+const newNums = myNums.filter((num) => num > 4)
+// Implicit return type example
+// const newNums = myNums.filter((num) => { return num > 4 })
 // console.log(newNums);
 
-
-// use forEach
-
+// Using forEach to achieve similar results
 // const newNums = []
 // myNums.forEach((num)=>{
 //      if(num > 4){
@@ -29,8 +27,7 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // console.log(newNums);
 
-
-// eg.
+// Example with an array of books
 const books = [
      {
           title: "book one",
@@ -124,9 +121,9 @@ const books = [
      },
 ]
 
-//
-let userBooks = books.filter((bk)=>{return bk.genre === 'fiction'})
-userBooks = books.filter((bk)=>{
+// Filtering books based on genre and publish year
+let userBooks = books.filter((bk) => { return bk.genre === 'fiction' })
+userBooks = books.filter((bk) => {
      return bk.publish >= 2010 && bk.genre === 'non-fiction'
 })
 

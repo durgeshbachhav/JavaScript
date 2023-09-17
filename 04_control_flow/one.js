@@ -1,51 +1,53 @@
-// control flow or logic flow
-const isUserLoggedIn = true
-const temp = 41
-if(isUserLoggedIn){//condition should be true for running code/execution code
+// Boolean variables to simulate user data
+const isUserLoggedIn = true;
+const temp = 41;
 
-}
-// if(false){} 
-
-// < , > , <= , >= , == , != , === tripple equal to check type also
-// = assign , == compare
-
-if(temp < 50){
-     console.log(`temp `);
+// Example of an 'if' statement
+if (isUserLoggedIn) {
+     // Code inside this block will execute because the condition is true
+     // ...
 }
 
-// var scope has a completely global
+// Comparison operators: <, >, <=, >=, ==, !=, === (strict equality checks both value and type)
+if (temp < 50) {
+     console.log(`Temperature is less than 50`);
+}
 
+// 'var' has function scope and is not block-scoped
 // const score = 200;
-// if(score > 100){
-//      var power = 'fly'
-//      console.log(`user power : ${power}`);
+// if (score > 100) {
+//      var power = 'fly';
+//      console.log(`User power: ${power}`);
 // }
-// console.log(`user power:${power}`);
+// console.log(`User power: ${power}`); // 'power' is accessible here
 
+const balance = 1000;
 
-const balance = 1000
-// implicit scope
-// if(balance > 500) console.log('test');
+// Example of implicit scope with a single-line 'if' statement
+// if (balance > 500) console.log('Test');
 
-// if(balance < 500){
-//      console.log(`less than`);
-
-// }else if(balance <750){
-//      console.log(`less than 750`);
+// Example of 'if-else if-else' statements
+// if (balance < 500) {
+//      console.log(`Balance is less than 500`);
+// } else if (balance < 750) {
+//      console.log(`Balance is less than 750`);
+// } else if (balance < 900) {
+//      console.log(`Balance is less than 900`);
+// } else {
+//      console.log(`Balance is greater than or equal to 1000`);
 // }
-// else if(balance <900){
-//      console.log(`less than 900`);
-// }else{
-// console.log(`greater than 1000`);
-// }
 
+const userLoggedIn = true;
+const debitCard = true;
+const loginFromGoogle = false;
 
-const userLoggedIn = true
-const debitCart = true
-const loginFromGoogle = false
-if(userLoggedIn && debitCart ){
-     console.log(  `allow to buy courses`);
+// Logical operators: && (AND), || (OR)
+// Checking conditions for purchasing courses
+if (userLoggedIn && debitCard) {
+     console.log(`Allow the user to buy courses`);
 }
-if(userLoggedIn || loginFromGoogle ){
-     console.log(  `allow to buy courses`);
+
+// Using 'OR' operator
+if (userLoggedIn || loginFromGoogle) {
+     console.log(`Allow the user to buy courses`);
 }

@@ -1,45 +1,36 @@
-// for of
-// higher order function
-// array specific loop
-// ["","",""]
-// [{},{},{}]
+// Using the for...of loop to iterate through an array
+const myArr = [1, 2, 3, 4, 5];
 
-const myArr = [1,2,3,4,5]
-// for of loop => object aur array, string par hume laga sakte hai
 for (const num of myArr) {
-     // console.log(`value of index is ${num}`);
+     // num takes on the values of each element in myArr
+     // console.log(`Value of index is ${num}`);
 }
 
-const greting = 'hello world'
-for (const greet of greting) {
-     if(greet == " ") continue
-     // console.log(`value of index is ${greet}`);
+// Iterating through a string using the for...of loop
+const greeting = 'hello world';
+
+for (const greet of greeting) {
+     if (greet === ' ') continue; // Skip spaces
+     // console.log(`Value of index is ${greet}`);
 }
 
-// Maps => it has unique values
-let map = new Map()
-map.set("IN","India")
-map.set("fr","france")
-map.set("Us","united states of america")
-// console.log(map);
-// kya mein ispe loop laga sakta hoon
+// Using the for...of loop with Map objects
+let map = new Map();
+map.set('IN', 'India');
+map.set('fr', 'France');
+map.set('Us', 'United States of America');
 
-// for (const key of map) {
-//      console.log(key);
-// }
-
-//  destructure array
+// Iterating through Map entries (key-value pairs) using destructuring
 for (const [key, value] of map) {
-     // console.log(key , ":- " , value);
+     // console.log(key, ':-', value);
 }
 
+// Attempting to use for...of with a regular object (not iterable) will result in an error
 const myObject = {
-     "game_1":"cricket",
-     "game_2":"wreteling"
-}
+     "game_1": "cricket",
+     "game_2": "wrestling"
+};
+// Uncommenting the following lines will result in a TypeError because myObject is not iterable.
 // for (const [key, value] of myObject) {
-//      console.log(key , ":- " , value);
+//      console.log(key, ':-', value);
 // }
-
-// this will getting error: TypeError: myObject is not iterable
-// so map is iterable but object not yah yah it alse but some different way

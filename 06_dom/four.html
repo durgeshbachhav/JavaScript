@@ -11,39 +11,40 @@
     </ul>
   </body>
   <script>
+    // Function to add a new language to the list
     function addLanguage(LangName) {
       const li = document.createElement("li");
       li.innerHTML = `${LangName}`;
       document.querySelector(".language").appendChild(li);
     }
+
+    // Adding languages using the addLanguage function
     addLanguage("java");
     addLanguage("typeScipt");
     addLanguage("cpp");
 
-    //     this is optimize way because we dont need to traverse whole tree
+    // An optimized way to add a new language
     function addOptimiseLanguage(LangName) {
       const li = document.createElement("li");
       li.appendChild(document.createTextNode(LangName));
       document.querySelector(".language").appendChild(li);
     }
+
+    // Adding another language using the optimized function
     addOptimiseLanguage("golang");
 
-    //     edit
-
+    // Edit the second language in the list
     const secondLang = document.querySelector("li:nth-child(2)");
-    // secondLang.innerHTML = 'mojo'
-
     const newLi = document.createElement("li");
     newLi.textContent = "mojo";
     secondLang.replaceWith(newLi);
-    console.log(newLi);
 
-    //     second edit
+    // Edit the first language in the list
     const firstLang = document.querySelector("li:nth-child(1)");
     firstLang.outerHTML = "<li>typeScript</li>";
 
-    //remove
+    // Remove the last language in the list
     const lastLanguage = document.querySelector('li:last-child')
-       lastLanguage.remove() 
+    lastLanguage.remove()
   </script>
 </html>

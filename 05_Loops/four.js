@@ -1,36 +1,32 @@
+const myObject = {
+     js: "JavaScript",
+     cpp: "C++",
+     rb: "Ruby",
+     swift: "Swift by Apple"
+};
 
-
-const myObject ={
-     js:"javascript",
-     cpp:"java",
-     rb:"ruby",
-     swift:"swift by apple"
-}
-
-// for in loop  are use for specily for object
-
+// Using the for...in loop to iterate through object properties
 for (const key in myObject) {
-     // console.log(`${key} is extension for :${myObject[key]}`);
+     // key represents the property names in myObject
+     // console.log(`${key} is an extension for: ${myObject[key]}`);
 }
 
-const programming = ['js','cpp','java','rb']
+const programming = ['js', 'cpp', 'java', 'rb'];
+
+// Using the for...in loop with arrays (not recommended)
 for (const key in programming) {
+     // key represents the array indices
      // console.log(`${key}`);
      // console.log(programming[key]);
 }
 
-// let map = new Map()
-// map.set("IN","India")
-// map.set("fr","france")
-// map.set("Us","united states of america")
-// 
-// this loop is not posible
-// map is not iterable that's why it can not iteratable
-for (const key in map) {
+// Using the for...in loop with Map objects (not recommended)
+// Note: Maps are not directly iterable with for...in loops
+// for (const key in map) {
 //     console.log(key);
-}
+// }
 
-
-// tips to use loops type
-// object => for in loop
-// arrays => for of loop
+// Tips for choosing the right loop type:
+// - For objects: Use the for...in loop to iterate through object properties.
+// - For arrays: Use the for...of loop to iterate through array elements.
+// - Avoid using for...in with arrays and Map objects, as it may lead to unexpected behavior.

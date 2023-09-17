@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>durgesh</title>
   </head>
-  <body style="background-color: #212121; color: #fff"></body>
+  <body style="background-color: #212121; color: #fff">
+    <!-- The body element is empty for now -->
+  </body>
   <script>
+    // Create a new <h1> element
     const div = document.createElement("h1");
 
+    // Set the class name of the <h1> element to "main"
     div.className = "main";
+
+    // Set the ID of the <h1> element to a random number between 1 and 10
     div.id = Math.round(Math.random() * 10 + 1);
+
+    // Set the "title" attribute of the <h1> element to "generated title"
     div.setAttribute("title", "generated title");
+
+    // Set the background color and padding for the <h1> element
     div.style.backgroundColor = "green";
     div.style.padding = "12px";
-    //     div.innerText = 'durgesh'
+
+    // Create a text node with the content "durgesh"
     const addtext = document.createTextNode("durgesh");
+
+    // Append the text node to the <h1> element
     div.appendChild(addtext);
+
+    // Append the <h1> element to the body of the document
     document.body.appendChild(div);
+
+    // Log the <h1> element to the console
     console.log(div);
   </script>
 </html>
