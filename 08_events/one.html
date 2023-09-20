@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>events</title>
+    <title>Event Handling</title>
   </head>
   <body style="background-color: #414141; color: aliceblue">
-    <h1>amazing images</h1>
+    <h1>Amazing Images</h1>
     <ul id="images">
       <li>
         <img
@@ -38,7 +38,6 @@
           id="owl"
           src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
           alt=""
-          
         />
       </li>
       <li>
@@ -57,47 +56,59 @@
     </ul>
   </body>
   <script>
-     //   document.getElementById('owl').onclick =function(){
-     //        alert('owl clicked')
-     //   }
-     // use event listerner because it provide functionlity like propogation 
-     // means features kam deta hai
-     document.getElementById('owl').addEventListener('click',(e)=>{
-          // alert('hi i am owl');
-          // console.log(e.target);
-     },true)
-     // default false hoti hai likne ki jarurat nhi hoti
-     // type , timestamp , defaultprevented, 
-     // target , toElement , srcElement, currentTarget, 
-     // clientx , clientY, screenx , screenY
-     // altkey, ctrlkey , shift , keycode
+    // Event handling in JavaScript
 
-     // document.getElementById('images').addEventListener('click',(e)=>{
-     //      console.log('clicked inside the ul');
-     // },false)//true
-     // document.getElementById('owl').addEventListener('click',(e)=>{
-     //      console.log('owl clicked');
-     //      e.stopPropagation();
-     // },false)//true
-// use event listerner because it provide functionlity like propogation  use for bubbling  use false for owl then images ? true for images then owl
+    // Example: Handling a click event on the 'owl' image with event propagation
+    document.getElementById("owl").addEventListener(
+      "click",
+      (e) => {
+        // Uncomment the following line to see an alert when the owl image is clicked.
+        // alert('Owl clicked');
+        // Uncomment the next line to log the event target (the clicked element).
+        // console.log(e.target);
+      },
+      true
+    ); // Use 'true' for capturing phase, 'false' for bubbling phase
 
-// event default
-// document.getElementById('google').addEventListener('click',(e)=>{
-//      e.preventDefault();
-//      e.stopPropagation();
-//      console.log('google clicked!');
-// },false)
+    // Example: Handling a click event on the 'images' ul element
+    document.getElementById("images").addEventListener(
+      "click",
+      (e) => {
+        // Uncomment the following line to see a log when the ul element is clicked.
+        // console.log('Clicked inside the ul');
+      },
+      false
+    ); // Use 'false' for bubbling phase
 
+    // Example: Handling a click event on the 'owl' image with event propagation
+    document.getElementById("owl").addEventListener(
+      "click",
+      (e) => {
+        // Uncomment the following lines to see a log and stop event propagation.
+        // console.log('Owl clicked');
+        // e.stopPropagation();
+      },
+      false
+    ); // Use 'false' for bubbling phase
 
-document.querySelector('#images').addEventListener('click',(e)=>{
-// console.log(e.target.parentNode);
-console.log(e.target.tagName);
-if(e.target.tagName === 'IMG'){
-     console.log(e.target.id);
-}
-let removeIt = e.target.parentNode
-// removeIt.remove();
-removeIt.parentNode.removeChild(removeIt);
-})
+    // Example: Preventing the default behavior of a link ('Google' link)
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   console.log('Google clicked!');
+    // }, false);
+
+    // Example: Dynamically removing a list item when clicking on an image
+    document.querySelector("#images").addEventListener("click", (e) => {
+      // Uncomment the following lines to see logs and remove the clicked item.
+      // console.log(e.target.parentNode);
+      // console.log(e.target.tagName);
+      if (e.target.tagName === "IMG") {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode;
+        // Uncomment the following line to remove the clicked list item.
+        // removeIt.parentNode.removeChild(removeIt);
+      }
+    });
   </script>
 </html>
