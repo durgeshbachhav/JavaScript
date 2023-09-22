@@ -1,25 +1,25 @@
 // Define a base class 'User' with a constructor that initializes the 'username' property.
 class User {
-     constructor(username){
+     constructor(username) {
           this.username = username;
      }
 
      // Define a method 'logme' to log the 'username'.
-     logme(){
+     logme() {
           console.log(`username is : ${this.username}`);
      }
 }
 
 // Define a derived class 'Teacher' that inherits from 'User'.
 class Teacher extends User {
-     constructor(username, email, password){
+     constructor(username, email, password) {
           super(username); // Call the constructor of the base class ('User') and pass 'username' to it.
           this.email = email; // Initialize 'email' property.
           this.password = password; // Initialize 'password' property.
      }
 
      // Define a method 'addCourse' specific to the 'Teacher' class.
-     addCourse(){
+     addCourse() {
           console.log(`new course is added by : ${this.username}`);
      }
 }

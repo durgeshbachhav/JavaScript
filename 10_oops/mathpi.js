@@ -25,20 +25,21 @@ const durgesh = {
 // console.log(Object.getOwnPropertyDescriptor(durgesh, "name"));  // Single property
 
 // Log all property descriptors of the 'durgesh' object (commented out).
-// console.log(Object.getOwnPropertyDescriptors(durgesh)); // All properties
+console.log(Object.getOwnPropertyDescriptors(durgesh)); // All properties
 
 // Define the 'name' property in 'durgesh' as non-writable and non-enumerable.
 Object.defineProperty(durgesh, 'name', {
      writable: false,
      // Make the property enumerable (uncomment to make it enumerable).
-     // enumerable: true
+     enumerable: true
      // Make the property non-enumerable (uncomment to make it non-enumerable).
-     enumerable: false
+     // enumerable: false
 })
 
 // Log the property descriptor of the 'name' property in 'durgesh' object after modification.
 // console.log(Object.getOwnPropertyDescriptor(durgesh, "name"));
-
+// durgesh.name = 'nikhil'
+// console.log(durgesh);
 // Iterate through the properties of 'durgesh' and log non-function key-value pairs.
 for (let [key, value] of Object.entries(durgesh)) {
      if (typeof value !== "function") {
