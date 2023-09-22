@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div class="language">
+          <li>javascript</li>
+     </div>
+     
+</body>
+<script>
+     function addNewLanguage(langName){
+          const li = document.createElement('li')
+          li.innerHTML = `${langName}`
+          document.querySelector('.language').appendChild(li)
+     }
+     addNewLanguage('java')
+     addNewLanguage('cpp')
+
+     function addNewLanguage1(langName){
+          const li = document.createElement('li')
+          li.appendChild(document.createTextNode(`${langName}`))
+          document.querySelector('.language').append(li)
+     }
+     addNewLanguage1('ruby')
+     const secondlang = document.querySelector('li:nth-child(2)')
+     const newli = document.createElement('li')
+
+     newli.textContent = 'scala'
+     secondlang.replaceWith(newli)
+
+     const firstLang = document.querySelector('li:nth-child(1)')
+     firstLang.outerHTML= "<li>typeScript</li>"
+
+     const lastLang = document.querySelector('li:last-child')
+     lastLang.remove();
+</script>
+</html>
