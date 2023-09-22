@@ -42,3 +42,9 @@ const MyArr = [2, 4, 5, 8, 6];
 // MyArr.forEach(() => { /* function logic */ });
 
 // Arrow functions are commonly used for concise function expressions and can be useful when working with arrays and higher-order functions.
+
+
+// imp: 
+
+
+// The forEach method in JavaScript does not return a new array; it is used for iterating over the elements of an array and applying a function to each element. 
